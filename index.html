@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/main.css">
+  <title>Conversor de divisas</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Conversor de divisas</h1>
+  </header>
+
+  <main>
+    <section>
+
+      <form name="formulario">
+        <figure></figure>
+        <input type="text" id="cantidad" placeholder="Cantidad de Dinero:">
+        <div id="btn_moneda"></div>
+        <button type="button" id="convertir">Convertir</button>
+        <p id="validaciones">Validaciones del formulario</p>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eligue tu moneda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="dolar">
+                  <input type="radio" name="moneda" value="Dolar">
+                </div>
+                <div id="peso-mx">
+                  <input type="radio" name="moneda" value="Peso Mexicano">
+                </div>
+                <div id="peso-col">
+                  <input type="radio" name="moneda" value="Peso Colombiano">
+                </div>
+                <div id="euro">
+                  <input type="radio" name="moneda" value="Euro">
+                </div>
+                <div id="libra">
+                  <input type="radio" name="moneda" value="Libra Esterlina">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Convertir a</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="dolar-2">
+                  <input type="radio" name="monedaConvertir" value="Dolar">
+                  <!-- <label for="dólar">Dólar</label><br> -->
+                </div>
+                <div id="peso-mx-2">
+                  <input type="radio" name="monedaConvertir" value="Peso Mexicano">
+                  <!-- <label for="peso_mex">Peso Mexicano</label><br> -->
+                </div>
+                <div id="peso-col-2">
+                  <input type="radio" name="monedaConvertir" value="Peso Colombiano">
+                  <!-- <label for="peso_col">Peso Colombiano</label><br> -->
+                </div>
+                <div id="euro-2">
+                  <input type="radio" name="monedaConvertir" value="Euro">
+                  <!-- <label for="euro">Euro</label><br> -->
+                </div>
+                <div id="libra-2">
+                  <input type="radio" name="monedaConvertir" value="Libra Esterlina">
+                  <!-- <label for="libra">Libra Esterlina</label> -->
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="./JS/script.js"></script>
+</body>
+
+</html>
